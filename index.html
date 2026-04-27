@@ -1,46 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MedTwinX | Digital Twin for Patient Care</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hover-lift { transition: transform 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-10px); }
+    </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans">
 
-    <nav class="flex justify-between items-center py-6 px-10 bg-white shadow-sm">
+    <nav class="sticky top-0 bg-white/95 backdrop-blur-sm shadow-sm z-50 py-4 px-10 flex justify-between items-center">
         <div class="text-2xl font-bold text-blue-700">MedTwinX</div>
-        <a href="#contact" class="bg-blue-700 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-800 transition">Request Demo</a>
+        <div class="space-x-8 text-slate-600 font-medium">
+            <a href="#platform" class="hover:text-blue-700 transition">Platform</a>
+            <a href="#team" class="hover:text-blue-700 transition">Team</a>
+            <a href="#contact" class="bg-blue-700 text-white px-6 py-2 rounded-full hover:bg-blue-800 transition">Request Demo</a>
+        </div>
     </nav>
 
-    <header class="py-20 px-10 text-center max-w-4xl mx-auto">
-        <h1 class="text-5xl font-extrabold mb-6">Precision Ventilation through Digital Twin Technology</h1>
-        <p class="text-xl text-slate-600 mb-10">We simulate lung mechanics in real-time, helping clinicians manage patients on ventilators with unprecedented accuracy and safety.</p>
-        <div class="space-x-4">
-            <a href="#contact" class="bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-800">Request a Demo</a>
-        </div>
+    <header class="py-24 px-10 text-center max-w-4xl mx-auto">
+        <h1 class="text-6xl font-extrabold mb-6 tracking-tight">Precision Ventilation via <span class="text-blue-700">Digital Twin</span></h1>
+        <p class="text-xl text-slate-600 mb-10 leading-relaxed">Real-time lung simulation, predictive analytics, and optimized clinical decision support. Empowering clinicians to save lives with data-driven insights.</p>
+        <a href="#contact" class="inline-block bg-blue-700 text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-blue-800 transition shadow-lg">Request a Demo</a>
     </header>
 
-    <section class="py-20 px-10 bg-white">
-        <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-10">
-            <div class="p-6 border border-slate-100 rounded-xl shadow-sm">
-                <h3 class="text-xl font-bold mb-3">Real-time Simulation</h3>
-                <p class="text-slate-600">Our digital twin model adapts to patient data instantly to predict outcomes.</p>
+    <section id="platform" class="py-20 px-10 bg-white">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 rounded-2xl overflow-hidden shadow-2xl">
+                <video autoplay loop muted playsinline class="w-full">
+                    <source src="user-interface/Overdistension_Video.mp4" type="video/mp4">
+                </video>
             </div>
-            <div class="p-6 border border-slate-100 rounded-xl shadow-sm">
-                <h3 class="text-xl font-bold mb-3">Clinician Support</h3>
-                <p class="text-slate-600">Reduce manual monitoring load and make data-driven weaning decisions.</p>
-            </div>
-            <div class="p-6 border border-slate-100 rounded-xl shadow-sm">
-                <h3 class="text-xl font-bold mb-3">Enhanced Safety</h3>
-                <p class="text-slate-600">Mitigate risk by testing ventilator adjustments in a virtual, risk-free environment.</p>
+            <div class="md:w-1/2">
+                <h2 class="text-4xl font-bold mb-6">Advanced Lung Mapping</h2>
+                <p class="text-lg text-slate-600 mb-6">Visualize patient lung mechanics in real-time. Our digital twin detects overdistension and airflow risks before they manifest clinically, allowing for proactive, precision-based ventilator adjustments.</p>
+                <ul class="space-y-3">
+                    <li class="flex items-center text-slate-700 font-medium">✓ Real-time VILI Risk Assessment</li>
+                    <li class="flex items-center text-slate-700 font-medium">✓ Predictive Clinical Forecasting</li>
+                    <li class="flex items-center text-slate-700 font-medium">✓ Optimized Ventilation Mode Selection</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="py-10 text-center text-slate-500">
-        <p>© 2026 MedTwinX Ready to transform care?</p>
-        <p class="mt-2 font-bold text-blue-700">anas_nisar@tamu.edu</p>
+    <section id="team" class="py-20 px-10 bg-slate-50">
+        <h2 class="text-4xl font-bold text-center mb-16">Meet the Team</h2>
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            
+            <div class="bg-white p-6 rounded-xl shadow-md text-center hover-lift">
+                <img src="team/Anas.png" alt="Anas" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-50">
+                <h3 class="text-xl font-bold">Anas</h3>
+                <p class="text-blue-700 font-semibold text-sm">Founder / Tech</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md text-center hover-lift">
+                <img src="team/Chinmay.png" alt="Chinmay" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-50">
+                <h3 class="text-xl font-bold">Chinmay</h3>
+                <p class="text-blue-700 font-semibold text-sm">Engineering</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md text-center hover-lift">
+                <img src="team/Banerjee.png" alt="Dr Banerjee" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-50">
+                <h3 class="text-xl font-bold">Debjyoti Banerjee</h3>
+                <p class="text-blue-700 font-semibold text-sm">Clinical Lead</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md text-center hover-lift">
+                <img src="team/Mike.png" alt="Mike" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-50">
+                <h3 class="text-xl font-bold">Mike</h3>
+                <p class="text-blue-700 font-semibold text-sm">Strategy</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-12 text-center bg-slate-900 text-slate-400">
+        <p>© 2026 MedTwinX. All rights reserved.</p>
+        <p class="mt-2 text-sm">anas_nisar@tamu.edu</p>
     </footer>
 
 </body>
